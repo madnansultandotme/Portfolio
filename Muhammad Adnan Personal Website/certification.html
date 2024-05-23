@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<title>Certifications Section</title>
+<style>
+    body{
+        font-family: Poppins,sans-serif;
+    }
+    /* Your CSS styles here */
+    .certifications {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        /* border: 2px solid green; */
+    }
+
+    .certification {
+        position: relative;
+        width: calc(33.33% - 20px);
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        /* border: 2px solid red; */
+    }
+
+    .certification:hover {
+        transform: scale(1.05);
+    }
+
+    .certification img {
+        width: 100%;
+        height: auto;
+        /* border: 2px solid blue; */
+    }
+
+    .certification-details {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 10px;
+        color: #fff;
+        transition: transform 0.3s ease;
+        transform: translateY(100%);
+    }
+
+    .certification:hover .certification-details {
+        transform: translateY(0);
+    }
+
+    .certification-details h3 {
+        margin: 0;
+        font-size: 16px;
+    }
+
+    .certification-details p {
+        margin: 5px 0 0;
+        font-size: 14px;
+    }
+
+    .filter-btns {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+        text-align: center;
+        /* border: 2px solid green; */
+        
+    }
+
+    .filter-btns button {
+        
+        padding: 8px 16px;
+        margin: 0 8px;
+        font-size: 14px;
+        border: none;
+        border-radius: 20px;
+        background-color: #007bff;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    /* Responsive adjustments */
+    @media screen and (max-width: 768px) {
+        .certification {
+            width: calc(50% - 20px);
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .certification {
+            width: calc(100% - 20px);
+        }
+    }
+</style>
+</head>
+<body>
+    <div class="filter-btns">
+        <button onclick="filterCertifications('web')">Backend Development</button>
+        <button onclick="filterCertifications('database')">Database Engineer</button>
+        <button onclick="filterCertifications('programming')">Programming</button>
+        <button onclick="filterCertifications('all')">All</button>
+    </div>
+<section class="certifications">
+    <div class="certification web">
+        <img src="/certificationjpg/backend1.jpg" alt="Certification">
+        <div class="certification-details">
+            <h3>Certification Title 1</h3>
+            <p>Description of Certification 1</p>
+        </div>
+    </div>
+    <div class="certification programming">
+        <img src="/certificationjpg/python.jpg" alt="Certification">
+        <div class="certification-details">
+            <h3>Certification Title 3</h3>
+            <p>Description of Certification 3</p>
+        </div>
+    </div>
+    <div class="certification web">
+        <img src="/certificationjpg/backend2.jpg" alt="Certification">
+        <div class="certification-details">
+            <h3>Certification Title 2</h3>
+            <p>Description of Certification 2</p>
+        </div>
+    </div>
+    <div class="certification web">
+        <img src="/certificationjpg/backend3.jpg" alt="Certification">
+        <div class="certification-details">
+            <h3>Certification Title 2</h3>
+            <p>Description of Certification 2</p>
+        </div>
+    </div>
+    <div class="certification programming">
+        <img src="/certificationjpg/fullstack.jpg" alt="Certification">
+        <div class="certification-details">
+            <h3>Certification Title 3</h3>
+            <p>Description of Certification 3</p>
+        </div>
+    </div>
+    <div class="certification web">
+        <img src="/certificationjpg/backend-dev.jpg" alt="Certification">
+        <div class="certification-details">
+            <h3>Certification Title 3</h3>
+            <p>Description of Certification 3</p>
+        </div>
+    </div>
+    <div class="certification database">
+        <img src="/certificationjpg/dbengineer1.jpg" alt="Certification">
+        <div class="certification-details">
+            <h3>Certification Title 3</h3>
+            <p>Description of Certification 3</p>
+        </div>
+    </div>
+    <div class="certification database">
+        <img src="/certificationjpg/dbengineer2.jpg" alt="Certification">
+        <div class="certification-details">
+            <h3>Certification Title 3</h3>
+            <p>Description of Certification 3</p>
+        </div>
+    </div>
+    <div class="certification database">
+        <img src="/certificationjpg/dbengineer3.jpg" alt="Certification">
+        <div class="certification-details">
+            <h3>Certification Title 3</h3>
+            <p>Description of Certification 3</p>
+        </div>
+    </div>
+    <div class="certification database">
+        <img src="/certificationjpg/dbengineer4.jpg" alt="Certification">
+        <div class="certification-details">
+            <h3>Certification Title 3</h3>
+            <p>Description of Certification 3</p>
+        </div>
+    </div>
+    <div class="certification database">
+        <img src="/certificationjpg/dbengineer5.jpg" alt="Certification">
+        <div class="certification-details">
+            <h3>Certification Title 3</h3>
+            <p>Description of Certification 3</p>
+        </div>
+    </div>
+    <div class="certification web">
+        <img src="/certificationjpg/fullstack.jpg" alt="Certification">
+        <div class="certification-details">
+            <h3>Certification Title 3</h3>
+            <p>Description of Certification 3</p>
+        </div>
+    </div>
+    <!-- coding Interview -->
+    <div class="certification programming web">
+        <img src="/certificationjpg/codinginterview.jpg" alt="Certification">
+        <div class="certification-details">
+            <h3>Certification Title 3</h3>
+            <p>Description of Certification 3</p>
+        </div>
+    </div>
+    <!-- Add more certification divs here -->
+</section>
+<div class="community">
+    <h1>Hello This is Community Section</h1>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo cumque, quia alias, officiis omnis unde nesciunt aliquam ut corrupti eum quas molestias iste necessitatibus recusandae autem beatae tenetur atque fugit.
+    </p>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        filterCertifications('web'); // Filter certifications by 'web' category initially
+    });
+    function filterCertifications(category) {
+        const certifications = document.querySelectorAll('.certification');
+        certifications.forEach(certification => {
+            if (category === 'all') {
+                certification.style.display = 'block';
+            } else if (certification.classList.contains(category)) {
+                certification.style.display = 'block';
+            } else {
+                certification.style.display = 'none';
+            }
+        });
+    }
+</script>
+
+</body>
+</html>

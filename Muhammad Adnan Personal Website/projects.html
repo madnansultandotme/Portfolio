@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+        /* Your CSS styles here */
+        .portfolio {
+            background: var(--snd-bf-color);
+            position: relative;
+        }
+
+        .portfolio h2 {
+            margin-bottom: 4rem;
+        }
+
+        .portfolio-box {
+            position: relative;
+            border-radius: 2rem;
+            box-shadow: 0 0 1rem var(--bg-color);
+            overflow: hidden;
+        }
+
+        .portfolio-box img {
+            width: 100%;
+            height: auto;
+        }
+
+        .portfolio-layout {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 1rem;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            transform: translateY(100%);
+            transition: transform 0.5s ease;
+            font-size: 1.2rem; /* Increase overlay font size */
+        }
+
+        .portfolio-box:hover .portfolio-layout {
+            transform: translateY(0);
+        }
+
+        .portfolio-layout h4 {
+            font-size: 1.8rem; /* Increase heading font size */
+            margin: 0;
+        }
+
+        .portfolio-layout p {
+            font-size: 1.4rem; /* Increase paragraph font size */
+            margin: 0.5rem 0;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <section class="portfolio" id="portfolio">
+        <h2 class="heading">Latest <span>Project</span></h2>
+
+        <div class="owl-carousel portfolio-container" id="portfolio-carousel">
+            <div class="portfolio-box">
+                <img src="img/1.jpg" alt="">
+                <div class="portfolio-layout">
+                    <h4>Web Design</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, dignissimos!</p>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <img src="img/5.jpg" alt="">
+                <div class="portfolio-layout">
+                    <h4>Web Design</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, dignissimos!</p>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <img src="img/2.jpg" alt="">
+                <div class="portfolio-layout">
+                    <h4>Web Design</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, dignissimos!</p>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <img src="img/4.jpg" alt="">
+                <div class="portfolio-layout">
+                    <h4>Web Design</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, dignissimos!</p>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <img src="img/2.jpg" alt="">
+                <div class="portfolio-layout">
+                    <h4>Web Design</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, dignissimos!</p>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <img src="img/3.jpg" alt="">
+                <div class="portfolio-layout">
+                    <h4>Web Design</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, dignissimos!</p>
+                </div>
+            </div>
+            <!-- Add more portfolio boxes here -->
+        </div>
+    </section>
+
+    <!--Contact Section Design -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var portfolioCarousel = $('#portfolio-carousel').owlCarousel({
+                loop: true,
+                margin: 20,
+                autoplay: true, // Auto play slides
+                autoplayTimeout: 3000, // Set autoplay interval (in milliseconds)
+                items: 2, // Display two slides
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 2 // Adjust for responsiveness
+                    },
+                    1000: {
+                        items: 3 // Adjust for responsiveness
+                    }
+                }
+            });
+
+            $('#portfolio-carousel').hover(
+                function() {
+                    portfolioCarousel.trigger('stop.owl.autoplay'); // Stop autoplay when hovering
+                },
+                function() {
+                    portfolioCarousel.trigger('play.owl.autoplay'); // Resume autoplay when mouse moves out
+                }
+            );
+        });
+    </script>
+</body>
+</html>
